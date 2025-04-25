@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Minecraft Development Hub - Alpha Version">
+    <title>Minecraft Development Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1d7a1d;
+            --secondary-color: #4CAF50;
+            --accent-color: #FFD700;
+            --background: #f4f4f4;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --warning-yellow: #fff3cd;
+            --warning-red: #f8d7da;
+            
+            --font-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --spacing: 8px;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Reset e Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-base);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        /* Header melhorado */
+        header {
+            background: linear-gradient(145deg, var(--primary-color), #134913);
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center; /* Centraliza a logo */
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Modo de seleção aprimorado */
+        .mode-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .mode-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .mode-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .mode-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Botões melhorados */
+        button, .button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        button:hover, .button:hover {
+            background: var(--secondary-color);
+            box-shadow: var(--shadow);
+        }
+
+        /* Alertas modernizados */
+        .news-alert {
+            background: var(--warning-yellow);
+            border-left: 6px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2.5rem 0;
+            border-radius: var(--border-radius);
+        }
+
+        .version-warning {
+            background: var(--warning-red);
+            border-left: 6px solid #dc3545;
+            margin: 2.5rem 0;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+        }
+
+        /* Footer melhorado */
+        footer {
+            background: linear-gradient(145deg, #134913, var(--primary-color));
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        /* Responsividade aprimorada */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .mode-selector {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                transform: none !important;
+            }
+        }
+
+        /* Acessibilidade */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+        header a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <a href="#home" aria-label="Minecraft Development Hub">
+                <img src="images/Daco_4084178.png" alt="Minecraft D</a>evelopment Hub Logo" style="max-width: 450px; height: auto;">
+            </a>
+            <nav aria-label="Main navigation">
+                <a href="#home" aria-current="page">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+                <a href="#about">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+                <a href="#status">
+                    <i class="fas fa-tasks"></i>
+                    Status
+                </a>
+                <a href="#community">
+                    <i class="fas fa-users"></i>
+                    Community
+                </a>
+                <a href="#conference">
+                    <i class="fas fa-calendar-alt"></i>
+                    Conference
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" role="main">
+        <section aria-labelledby="mode-heading">
+            <h2 id="mode-heading" class="sr-only">Game Modes</h2>
+            <div class="mode-selector">
+                <article class="mode-card">
+                    <h3><i class="fas fa-globe-americas"></i> Single Planet Test</h3>
+                    <p>Explore and build in creative mode on a single planet</p>
+                    <button aria-label="Start Single Planet Mode">
+                        <i class="fas fa-rocket"></i>
+                        Launch Mode
+                    </button>
+                </article>
+                <article class="mode-card">
+                    <h3><i class="fas fa-galactic-republic"></i> Multi Planet Challenge</h3>
+                    <p>Team up with friends across multiple planets</p>
+                    <button aria-label="Start Multi Planet Mode">
+                        <i class="fas fa-users"></i>
+                        Launch Multiplayer
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <article class="news-alert" role="alert">
+            <h2><i class="fas fa-exclamation-triangle"></i> Development Status: Alpha</h2>
+            <ul role="list">
+                <li role="listitem">Active development in progress</li>
+                <li role="listitem">Possible instability during updates</li>
+                <li role="listitem">Features subject to change</li>
+            </ul>
+        </article>
+
+        <section class="version-warning" role="region" aria-labelledby="beta-alert">
+            <h2 id="beta-alert"><i class="fas fa-bullhorn"></i> Beta Transition Notice</h2>
+            <ul role="list">
+                <li role="listitem">Alpha updates paused until beta release</li>
+                <li role="listitem">Experimental builds available</li>
+            </ul>
+            <div class="cta-buttons" style="margin-top: 1.5rem;">
+                <a href="#blog" class="button">
+                    <i class="fas fa-blog"></i>
+                    Development Blog
+                </a>
+                <a href="#issues" class="button">
+                    <i class="fas fa-bug"></i>
+                    Report Issues
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Minecraft Dev Team. All rights reserved.</p>
+            <p style="margin-top: 1rem;">
+                <a href="#accessibility" style="color: var(--accent-color);">Accessibility Statement</a> |
+                <a href="#privacy" style="color: var(--accent-color);">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
