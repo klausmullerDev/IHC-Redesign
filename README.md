@@ -1,33 +1,33 @@
 # Minecraft Development Hub Redesign
-![image](https://github.com/user-attachments/assets/8dc104d6-8de4-465a-8794-1b7a9aaaf9f8)
-
 
 **Integrantes:**  
 Klaus Müller Marques  
 Bruno Rodrigues Barcelos de Oliveira  
 
 ## 📝 Descrição
-Redesign da página inicial do Minecraft (versão 2009) desenvolvido como trabalho da disciplina de Interação Humano-Computador (IHC). O projeto foca em:
+Redesign da página inicial histórica do Minecraft (versão 2009) desenvolvido como trabalho da disciplina de Interação Humano-Computador (IHC). O projeto foca em:
 
-- Melhoria de usabilidade
-- Aplicação de princípios de acessibilidade
-- Atualização do design visual
-- Implementação de responsividade
+- Preservação da identidade visual original
+- Modernização de técnicas de desenvolvimento
+- Aplicação de padrões web atuais
+- Melhoria de acessibilidade
 
-## ✨ Funcionalidades
-✅ Semântica HTML aprimorada  
-✅ Navegação acessível com ARIA  
-✅ Design responsivo para múltiplos dispositivos  
-✅ Sistema de cores modernizado  
-✅ Feedback visual interativo  
+## ✨ Destaques
+🕹️ Fidelidade ao design retro  
+🔍 Navegação semântica aprimorada  
+📱 Adaptação responsiva  
+🎨 Sistema de cores atualizado  
+
+## 📌 Referência Histórica
+Versão original preservada pelo Internet Archive:  
+[https://web.archive.org/web/20100203114722/http://www.minecraft.net/](https://web.archive.org/web/20100203114722/http://www.minecraft.net/)
 
 ## 🛠 Tecnologias
 - HTML5 semântico
-- CSS3 com variáveis
-- Font Awesome (ícones)
-- GitHub Pages
+- CSS3 moderno (Grid/Flexbox)
+- Design System com variáveis CSS
+- Ícones Font Awesome
 
-## 🚀 Instalação
-```bash
-git clone https://github.com/seu-usuario/repositorio.git
-cd repositorio/IHC
+## 🌐 Demo
+Acesse a versão atualizada:  
+[https://seu-user.github.io/repositorio/IHC/](https://seu-user.github.io/repositorio/IHC/)
