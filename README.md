@@ -1,4 +1,6 @@
 # Minecraft Development Hub Redesign
+![image](https://github.com/user-attachments/assets/8dc104d6-8de4-465a-8794-1b7a9aaaf9f8)
+
 
 **Integrantes:**  
 Klaus Müller Marques  
