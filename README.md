@@ -28,6 +28,3 @@ Versão original preservada pelo Internet Archive:
 - Design System com variáveis CSS
 - Ícones Font Awesome
 
-## 🌐 Demo
-Acesse a versão atualizada:  
-[https://seu-user.github.io/repositorio/IHC/](https://seu-user.github.io/repositorio/IHC/)
